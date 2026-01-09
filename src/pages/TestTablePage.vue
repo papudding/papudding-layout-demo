@@ -62,80 +62,57 @@ const searchTerm = ref({
     :search-collapse="searchCollapse" @handle-current-change="(inPage: number) => page = inPage"
     @handle-size-change="(inPageSize: number) => pageSize = inPageSize">
     <template #searchForm>
-      <DefaultSearchLayout @report-collapse="(isCollapse: boolean) => searchCollapse = isCollapse">
+      <DefaultSearchLayout @report-collapse="(isCollapse: boolean) => searchCollapse = isCollapse" :show-more="true">
         <template #searchContent>
           <el-form ref="formRef" :model="searchTerm" :inline="true" :label-position="'top'">
-            <el-row style="width: 100%;">
-              <el-col :span="12">
-                <el-form-item label="工作类型" prop="taskType">
-                  <el-select v-model="searchTerm.taskType" style="width: 100%;" placeholder="请选择工作类型" clearable>
-                    <el-option label="dicName" value="dicCode" />
-                  </el-select>
-                </el-form-item>
-              </el-col>
+            <el-form-item label="工作类型" prop="taskType">
+              <el-select v-model="searchTerm.taskType" placeholder="请选择工作类型" clearable>
+                <el-option label="dicName" value="dicCode" />
+              </el-select>
+            </el-form-item>
 
-              <el-col :span="12">
-                <el-form-item label="二级分类" prop="firstClass">
-                  <el-input v-model="searchTerm.firstClass" placeholder="请输入二级分类" />
-                </el-form-item>
-              </el-col>
+            <el-form-item label="二级分类" prop="firstClass" >
+              <el-input v-model="searchTerm.firstClass" placeholder="请输入二级分类" />
+            </el-form-item>
 
-            </el-row>
-            <el-row style="width: 100%;">
-              <el-col :span="6">
-                <el-form-item label="工作类型" prop="taskType">
-                  <el-select style="width: 100%;" placeholder="请选择工作类型" clearable>
-                    <el-option label="dicName" value="dicCode" />
-                  </el-select>
-                </el-form-item>
-              </el-col>
+            <el-form-item label="工作类型" prop="taskType">
+              <el-select placeholder="请选择工作类型" clearable>
+                <el-option label="dicName" value="dicCode" />
+              </el-select>
+            </el-form-item>
 
-              <el-col :span="6">
-                <el-form-item label="二级分类" prop="demand">
-                  <el-input v-model="searchTerm.demand" placeholder="请输入二级分类" />
-                </el-form-item>
-              </el-col>
-              <el-col :span="6">
-                <el-form-item label="工作类型" prop="taskType">
-                  <el-select style="width: 100%;" placeholder="请选择工作类型" clearable>
-                    <el-option label="dicName" value="dicCode" />
-                  </el-select>
-                </el-form-item>
-              </el-col>
-              <el-col :span="6">
-                <el-form-item label="工作类型" prop="taskType">
-                  <el-select style="width: 100%;" placeholder="请选择工作类型" clearable>
-                    <el-option label="dicName" value="dicCode" />
-                  </el-select>
-                </el-form-item>
-              </el-col>
-            </el-row>
+            <el-form-item label="二级分类" prop="demand">
+              <el-input v-model="searchTerm.demand" placeholder="请输入二级分类" />
+            </el-form-item>
+            <el-form-item label="工作类型" prop="taskType">
+              <el-select placeholder="请选择工作类型" clearable>
+                <el-option label="dicName" value="dicCode" />
+              </el-select>
+            </el-form-item>
+            <el-form-item label="工作类型" prop="taskType">
+              <el-select placeholder="请选择工作类型" clearable>
+                <el-option label="dicName" value="dicCode" />
+              </el-select>
+            </el-form-item>
           </el-form>
         </template>
 
         <template #searchButton>
-          <el-button type="primary">查询</el-button><span />
+          <el-button type="primary">查询</el-button>
           <el-button @click="onReset">重置</el-button>
         </template>
 
         <template #searchContentMore>
           <el-form ref="formMoreRef" :model="searchTerm" :inline="true" :label-position="'top'">
-            <el-row style="width: 100%;">
-              <el-col :span="12">
-                <el-form-item label="工作类型" prop="taskType">
-                  <el-select style="width: 100%;" placeholder="请选择工作类型" clearable>
-                    <el-option label="dicName" value="dicCode" />
-                  </el-select>
-                </el-form-item>
-              </el-col>
+            <el-form-item label="工作类型" prop="taskType">
+              <el-select placeholder="请选择工作类型" clearable>
+                <el-option label="dicName" value="dicCode" />
+              </el-select>
+            </el-form-item>
 
-              <el-col :span="12">
-                <el-form-item label="二级分类" prop="secondClass">
-                  <el-input v-model="searchTerm.secondClass" placeholder="请输入二级分类" />
-                </el-form-item>
-              </el-col>
-
-            </el-row>
+            <el-form-item label="二级分类" prop="secondClass">
+              <el-input v-model="searchTerm.secondClass" placeholder="请输入二级分类" />
+            </el-form-item>
           </el-form>
         </template>
       </DefaultSearchLayout>
@@ -185,4 +162,9 @@ const searchTerm = ref({
     </template>
   </PapuddingTablePage>
 </template>
-<style scoped></style>
+<style scoped>
+:deep(.el-form-item) {
+  max-width: 300px;
+  min-width: 200px;
+}
+</style>
