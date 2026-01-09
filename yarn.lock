@@ -628,10 +628,10 @@ normalize-wheel-es@^1.2.0:
   resolved "https://registry.npmmirror.com/normalize-wheel-es/-/normalize-wheel-es-1.2.0.tgz#0fa2593d619f7245a541652619105ab076acf09e"
   integrity sha512-Wj7+EJQ8mSuXr2iWfnujrimU35R2W4FAErEyTmJoJ7ucwTn2hOUSsRehMb5RSYkxXGTM7Y9QpvPmp++w5ftoJw==
 
-papudding-layout@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.npmmirror.com/papudding-layout/-/papudding-layout-0.2.2.tgz#2eb8bb4526bd96aa9af203cf33e57b9017ec9d77"
-  integrity sha512-OVRu9FWkLRxjIi4wT1La/29L7LC5Q8XNM1mOGU6LAhLSWC+DbL572B7Nn+aWYo64v4yHvNKmUj+KFVOIOdRPjw==
+papudding-layout@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/papudding-layout/-/papudding-layout-0.2.3.tgz#82e1cd7ca3ae2126a1be685e5327b5bc459b846b"
+  integrity sha512-hxw5PrHuUPVQ2jA3340922zhQMjyKH/hppHaZK3M8VlwzVCuDt5dZW4urzD+RoXOEk/5wCUU3fbSyFmP/7NHpw==
   dependencies:
     "@element-plus/icons-vue" "^2.3.1"
     element-plus "^2.9.11"
