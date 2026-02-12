@@ -1,4 +1,5 @@
 import { type MenuItem } from 'papudding-layout'
+import router from '../router'
 
 export const menuItemsBuilder = (): MenuItem[] => {
   return [
@@ -19,7 +20,7 @@ export const menuItemsBuilder = (): MenuItem[] => {
       handler: () => {
         console.log('Logout clicked')
         localStorage.removeItem('papudding-layout-state')
-        window.location.href = '/login'
+        router.push('/login')
       },
       divided: true
     }
