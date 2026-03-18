@@ -12,7 +12,7 @@ papudding-layout 的演示项目，展示如何使用该布局组件构建现代
 - **语言**: TypeScript
 - **构建工具**: Vite
 - **UI 组件库**: Element Plus
-- **路由管理**: Vue Router 4
+- **路由管理**: Vue Router 5
 - **状态管理**: Vuex 4
 - **布局组件**: papudding-layout
 
@@ -31,17 +31,20 @@ papudding-layout-demo/
 │   │   ├── TestPage.vue   # 测试页面
 │   │   └── TestTablePage.vue # 测试表格页面
 │   ├── store/             # Vuex 状态管理
-│   │   └── index.ts       # 主 store 文件
+│   │   ├── index.ts       # 主 store 文件
+│   │   └── papuddingLayout.ts # 布局状态管理
 │   ├── utils/             # 工具函数
 │   │   └── menuItemBuilder.ts # 菜单构建工具
 │   ├── App.vue            # 根组件
 │   ├── main.ts            # 应用入口
-│   └── router.ts          # 路由配置
+│   ├── router.ts          # 路由配置
+│   └── variables.css      # 全局变量样式
 ├── index.html             # HTML 入口文件
 ├── package.json           # 项目配置
 ├── tsconfig*.json         # TypeScript 配置
 ├── vite.config.ts         # Vite 配置
-└── yarn.lock              # Yarn 依赖锁定文件
+├── pnpm-lock.yaml         # pnpm 依赖锁定文件
+└── pnpm-workspace.yaml    # pnpm 工作空间配置
 ```
 
 ## 功能特性
@@ -58,37 +61,37 @@ papudding-layout-demo/
 ### 安装依赖
 
 ```bash
-# 使用 Yarn
-yarn install
+# 使用 pnpm
+pnpm install
 ```
 
 ### 开发模式
 
 ```bash
-# 使用 Yarn
-yarn dev
+# 使用 pnpm
+pnpm dev
 ```
 
 项目将在 http://localhost:5173 启动。
 
 ### 调试 papapudding-layout 
 ```bash
-# 使用 Yarn
-yarn remove papudding-layout
+# 使用 pnpm
+pnpm remove papudding-layout
 ```
 前序：
-- 确保已在 papudding-layout 项目目录下执行 `yarn build` 构建项目
-- 确保已在 papudding-layout 项目目录下执行 `yarn link` 链接项目
+- 确保已在 papudding-layout 项目目录下执行 `pnpm build` 构建项目
+- 确保已在 papudding-layout 项目目录下执行 `pnpm link` 链接项目
 
 ```bash
-yarn link papudding-layout
+pnpm link papudding-layout
 ```
 ### 取消调试：
 ```bash
-yarn unlink papudding-layout
+pnpm unlink papudding-layout
 ```
 ```bash
-yarn add papudding-layout
+pnpm add papudding-layout
 ```
 
 
